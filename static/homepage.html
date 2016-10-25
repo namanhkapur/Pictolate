@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+        body {
+            width:100%;
+            height:100%;
+            position:fixed;
+            background-color:#34495e;
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 35px;
+            line-height: 40px;
+            font-family: 'Lato', sans-serif;
+            color: #ecf0f1;
+            height: 160px;
+            overflow:hidden;
+        }
+
+        .visible {
+            font-weight:600;
+            overflow:hidden;
+            height:40px;
+            padding:0 40px;
+
+        &:before {
+             content:'[';
+             left: 0;
+             line-height:40px;
+         }
+        &:after {
+             content:']';
+             position:absolute;
+             right: 0;
+             line-height:40px;
+         }
+        &:after, &:before {
+                      position:absolute;
+                      top:0;
+                      color:#16a085;
+                      font-size:42px;
+                      -webkit-animation-name: opacity;
+                      -webkit-animation-duration: 2s;
+                      -webkit-animation-iteration-count: infinite;
+                      animation-name: opacity;
+                      animation-duration: 2s;
+                      animation-iteration-count: infinite;
+
+                  }
+        }
+
+        p {
+            display:inline;
+            float:left;
+            margin:0;
+        }
+
+        ul {
+            margin-top:0;
+            padding-left:110px;
+            text-align:left;
+            list-style:none;
+            -webkit-animation-name: change;
+            -webkit-animation-duration: 6s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: change;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        ul li {
+            line-height:40px;
+            margin:0;
+        }
+
+        @-webkit-keyframes opacity {
+            0%, 100% {opacity:0;}
+            50% {opacity:1;}
+        }
+
+        @-webkit-keyframes change {
+            0%, 12%, 100% {transform:translateY(0);}
+            17%,29% {transform:translateY(-25%);}
+            34%,46% {transform:translateY(-50%);}
+            51%,63% {transform:translateY(-75%);}
+            68%,80% {transform:translateY(-50%);}
+            85%,97% {transform:translateY(-25%);}
+        }
+
+        @keyframes opacity {
+            0%, 100% {opacity:0;}
+            50% {opacity:1;}
+        }
+
+        @keyframes change {
+            0%, 12%, 100% {transform:translateY(0);}
+            17%,29% {transform:translateY(-25%);}
+            34%,46% {transform:translateY(-50%);}
+            51%,63% {transform:translateY(-75%);}
+            68%,80% {transform:translateY(-50%);}
+            85%,97% {transform:translateY(-25%);}
+        }
+    </style>
+</head>
+<center>
+
+
+<body>
+
+    <div style="margin-top: 50px">
+        <h3 style="padding-bottom: 25px; color:navajowhite; font-size: 60px; font-family: Avenir; font-weight: bold">
+            PICTOLATE
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div>
+        <img src="animat-image-color.gif" style="width: 175px;">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="content visible">
+    
+
+        <p>
+            [Hello:
+
+        </p>
+        <ul>
+            <li>
+                Hola!]
+            </li>
+            <li>
+                Привет!]
+
+            </li>
+            <li>
+                Guten Tag!]
+            </li>
+            <li>
+                Bonjour!]
+            </li>
+        </ul>
+       
+
+    </div>
+
+    <br>
+    <form method = "GET" action = "/process">
+    <div class="row">
+        <div style="padding-left: 510px">
+            <div class="col-md-6">
+                <center>
+                    <div class="input-group" style="padding-right: 100px">
+                            
+                              <input name="input" type="url" style="background-color: rgb(238, 238, 238);margin-bottom: 20px;" ;="" class="form-control" placeholder="Enter URL of image">
+                                <input type = "submit" />
+                            
+                        
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <select name = "dropdown" class="form-control text-center" style="width:175px">
+
+            <option value = "es">Spanish </option>
+            <option value = "fr">French</option>
+            <option value = "ru">Russian</option>
+            <option value = "de">German</option>
+            <option value = "zh">Mandarin Chinese</option>
+            <option value = "ar">Arabic</option>
+            <option value = "pt">Portuguese</option>
+            <option value = "nl">Dutch</option>
+            <option value = "hi">Hindi</option>
+            <option value = "it">Italian</option>
+            <option value = "ja">Japanese</option>
+            <option value = "he">Hebrew</option>
+
+        </select>
+    </div>
+    </form>
+</body>
+
+</center>
+
+
+</html>
